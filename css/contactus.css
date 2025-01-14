@@ -1,0 +1,484 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  min-height: 500px;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.4), rgba(4, 9, 30, 0.4)),
+    url(../img/interior.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 150 px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  display: block;
+  margin: auto;
+  transition: 0.5;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+
+.text-box {
+  width: 90%;
+  color: #ffffff;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    background: none;
+    
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+.contact-us {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-container {
+  width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-form, .contact-info {
+  flex: 1;
+  min-width: 300px;
+  max-width: 45%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h1, .contact-info h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-form p, .contact-info p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #bfa68d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #8f8383;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.contact-info ul li i {
+  margin-right: 10px;
+  color: #bfa68d;
+}
+
+.map iframe {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: #e2dbd3;
+  color: #333;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 3px solid #bdb3a9;
+  margin-top: 100px;
+}
+
+.footer-boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.footer-box {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  text-align: left;
+}
+
+.footer-box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.footer-box p {
+  font-size: 16px;
+  margin: 10px 0 20px;
+  line-height: 24px;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icons a {
+  color: #333;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease-in-out;
+}
+
+.icons a:hover {
+  color: #8f8383;
+  transform: scale(1.1);
+}
+
+.newsletter {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 12px;
+  width: calc(100% - 150px);
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  font-size: 14px;
+}
+
+.newsletter input:focus {
+  border-color: #bfa68d;
+}
+
+.newsletter button {
+  padding: 12px 20px;
+  background-color:#333;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #8f8383;
+  transform: scale(1.05);
+}
+
+.footer p:last-child {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1% 5%;
+  }
+
+  .text-box h1 {
+    font-size: 30px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+  }
+
+  .nav-links {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links ul {
+    display: block; 
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    position: absolute;
+    top: 8px;
+    left: 0;
+  }
+
+  .nav-links.active ul {
+    display: flex; 
+  }
+
+  .nav-links ul li {
+    padding: 12px 8px;
+    text-align: center;
+  }
+
+  .nav-links ul li a {
+    font-size: 16px;
+  }
+
+
+  .contact-us {
+    padding: 20px 10px; 
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 10px; 
+
+  .contact-form, .contact-info {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .contact-form h1,
+  .contact-info h1 {
+    font-size: 22px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px; 
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box; 
+  }
+
+  .contact-form button {
+    padding: 10px;
+    font-size: 14px;
+    width: 100%; 
+    box-sizing: border-box;
+  }
+
+  .map iframe {
+    height: 200px;
+  }
+
+
+  .footer-boxes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-box h1 {
+    font-size: 36px;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 5% 3%;
+  }
+
+  .nav-links ul li {
+    padding: 12px 10px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-form,
+  .contact-info {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .footer-boxes {
+    flex-direction: column;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+  }
+
+  .map iframe {
+    height: 200px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .text-box h1 {
+    font-size: 42px;
+  }
+
+  .contact-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-form,
+  .contact-info {
+    max-width: 48%;
+  }
+
+  .footer-boxes {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 45%;
+  }
+
+  .map iframe {
+    height: 250px;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .text-box h1 {
+    font-size: 50px;
+  }
+
+  .contact-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-form,
+  .contact-info {
+    max-width: 45%;
+  }
+
+  .footer-boxes {
+    gap: 20px;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 45%;
+  }
+
+  .map iframe {
+    height: 300px;
+  }
+}
+}
