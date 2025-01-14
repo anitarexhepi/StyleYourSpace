@@ -6,6 +6,7 @@
     <title>Log in</title>
     <link rel="stylesheet" href="css/login.css" />
     <link rel="icon" href="img/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
   <body>
     <div class="container">
@@ -120,6 +121,8 @@
         var_dump($user); 
         if ($user && $user['password'] === $password) {
             $_SESSION['user_role'] = $user['role'];
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_email'] = $user['email'];
             if ($user['role'] === 'admin') {
                 header('Location: dashboard.php');
                 exit();
