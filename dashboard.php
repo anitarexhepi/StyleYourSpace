@@ -34,7 +34,7 @@
                     <img src="img/pfp.jpg" alt="Profile" class="profile-img">
                     <span>Your Profile</span>
                 </a>
-                <button class="logout-btn">Log Out</button>
+                <button onclick="window.location.href='logout.php'" class="logout-btn">Logout</button>
             </div>
         </header>
         </header>
