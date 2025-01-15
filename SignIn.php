@@ -13,7 +13,7 @@
       
       
       <div class="form-container" id="loginForm">
-        <h2>Log in</h2>
+        <h2>Log in///</h2>
         <form action="SignIn.php" method="POST">
           <div id="loginError" class="error-message"></div>
           <input type="email" id="loginEmail" name="loginEmail" placeholder="Email" required />
@@ -132,6 +132,7 @@
             }
         } else {
             echo "<script>document.getElementById('loginError').innerText = 'Invalid credentials';</script>";
+            
         }
     }
     ?>
